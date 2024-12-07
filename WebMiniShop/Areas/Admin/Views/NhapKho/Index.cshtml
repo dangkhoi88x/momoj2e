@@ -30,8 +30,11 @@
                     {
                         <tr>
                             <td>@item.MaNK</td>
-                            <td>@item.NhaCungCap?.TenNCC</td> <!-- Hiển thị thông tin nhà cung cấp -->
-                            <td>@item.HangHoa?.TenHH</td> <!-- Hiển thị thông tin hàng hóa -->
+                            <td>@(item.NhaCungCap != null ? item.NhaCungCap.TenNCC : "Nhà cung cấp ABC")</td>
+
+
+                             
+                            <td>@item.MaHH</td> <!-- Hiển thị thông tin hàng hóa -->
                             <td>@item.NgayNhap.ToShortDateString()</td>
                             <td>@item.SoLuong</td>
                             <td>@item.GiaNhap</td>
